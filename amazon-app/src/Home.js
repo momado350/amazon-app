@@ -14,7 +14,7 @@ function Home() {
     <div className="home__row">
 					<Product
 						id="3434324"
-						title="The Lean Startup"
+						title="The Lean Startup: How Constant Innovation Creates Radically Successful Business Paperback"
 						price={29.99}
 						image="https://images-na.ssl-images-amazon.com/images/I/81-QB7nDh4L.jpg"
 						rating={3}
@@ -42,19 +42,21 @@ function Home() {
 						image="https://images-na.ssl-images-amazon.com/images/I/71vCuRn4CkL._AC_SX522_.jpg"
 						rating={4}
 					/>
-					<Product
-						title="DualShock 4 Wireless Controller for PlayStation 4 - Magma Red"
-						price={64.99}
-						image="https://images-na.ssl-images-amazon.com/images/I/81L9%2B4dTIgL._SX522_.jpg"
-						rating={4}
-					/>
-				</div>
-				<div className="home__row">
-					<Product
+
+                    <Product
 						title="Final Fantasy VII Remake - PlayStation 4 Deluxe Edition"
 						price={95.0}
 						image="https://images-na.ssl-images-amazon.com/images/I/713-OtN4-8L._SX385_.jpg"
 						rating={5}
+					/>
+					
+				</div>
+				<div className="home__row">
+                <Product
+						title="DualShock 4 Wireless Controller for PlayStation 4 - Magma Red"
+						price={64.99}
+						image="https://images-na.ssl-images-amazon.com/images/I/81L9%2B4dTIgL._SX522_.jpg"
+						rating={4}
 					/>
                     
 				

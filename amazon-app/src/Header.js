@@ -3,14 +3,19 @@ import './Header.css'
 import SearchIcon from "@material-ui/icons/Search"
 
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
-
+import { Link } from 'react-router-dom'
 
 
 function Header() {
     return ( <div className = 'header' >
+        {/**we need this link to take us to the home page */}
+        <Link to="/">
         <img className = "header__logo"
         src = "http://pngimg.com/uploads/amazon/amazon_PNG11.png" /> 
+          </Link>
+
         <div className = "header__search" >
+      
 
         <input className = "header__searchInput"
         type = "text" / >
