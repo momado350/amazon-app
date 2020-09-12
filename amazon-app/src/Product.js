@@ -1,23 +1,29 @@
 import React from 'react';
 import './Product.css';
-
-function Product() {
+//we pass props into our function(title, image, price, rating)
+function Product({title, image, price, rating}) {
     return (
         <div className="product">
             <div className="product__info">
-                <p>The Lean startup</p>
+                {/**using title inside curly brakets to render tilte of products */}
+                <p>{title}</p>
                 <p className="product__price">
                     <small>$</small>
-                    <strong>19.99</strong>
+                    <strong>{price}</strong>
                 </p>
 
                 <div className="product__rating">
+                    {Array(rating)
+                    .fill()
+                    .map((_, i) => (
                     <p>⭐</p>
+                    ))}
+                    
                     </div>
                 
 
             </div>
-            <img src="https://books.google.com/books/content/images/frontcover/DSxjDwAAQBAJ?fife=w200-h300"alt=""/>
+            <img src={image}alt=""/>
                 <button>Add to Basket</button>
             
         </div>
