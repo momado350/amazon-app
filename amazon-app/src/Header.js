@@ -9,16 +9,19 @@ import { auth } from './firebase';
 
 
 function Header() {
-    const [{ basket }, user, dispatch] = useStateValue();
+    const [{ basket, user }, dispatch] = useStateValue();
+
     const handleAuthentication = () => {
         if (user) {
             auth.signOut();
         }
     };
-    return ( <div className = 'header' >
+    return ( 
+    <div className = 'header' >
         {/**we need this link to take us to the home page */}
         <Link to="/">
-        <img className = "header__logo"
+        <img 
+        className = "header__logo"
         src = "http://pngimg.com/uploads/amazon/amazon_PNG11.png" /> 
           </Link>
 
@@ -35,18 +38,19 @@ function Header() {
 
         <div className = "header__nav" >
             
-            <Link to={user && '/login'}> 
-            <div onClick = {handleAuthentication} className="header__option" >
-            <span
-            className="header__optionLineOne">
-                Hello Guest
+        <Link to={!user && "/login"}>
+          {/* Make this div clickable */}
+          <div onClick={handleAuthentication} className="header__option">
+            <span className="header__optionLineOne">
+              Hello {user ? user.email : "Guest"}
             </span>
 
-            <span className="header__optionLineTwo">{user ?'Sign Out' : 'Sign In'}
-                
-                </span>
-                </div>
-                </Link>
+            {/* If user is signed in, display Sign Out, otherwise display Sign In */}
+            <span className="header__optionLineTwo">
+              {user ? "Sign Out" : "Sign In"}
+            </span>
+          </div>
+        </Link>
                 <div className="header__option"> 
                 <span
             className="header__optionLineOne">
