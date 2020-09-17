@@ -43,3 +43,4 @@ app.post("/payments/create", async (request, response) => {
 exports.api = functions.https.onRequest(app);
 
 //http://localhost:5001/challenge-a915b/us-central1/api
+//http://localhost:5001/challenge-a915b/us-central1/api
