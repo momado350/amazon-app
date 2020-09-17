@@ -8,6 +8,7 @@ function Orders() {
     const [orders, setOrders] = useState([]);
     
     useEffect(() => {
+        if(user) {
         db
         .collection('users')
         .doc(user?.uid)
@@ -23,6 +24,7 @@ function Orders() {
         )
             
         )
+            }
     }, [])
     return (
         <div className="orders">
