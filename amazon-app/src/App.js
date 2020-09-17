@@ -7,6 +7,7 @@ import Payment from "./Payment";
 import Subtotal from './Subtotal';
 import Login from './Login';
 import Orders from './Orders'
+
 import {useStateValue} from './StateProvider';
 import {loadStripe} from "@stripe/stripe-js";
 import {Elements} from "@stripe/react-stripe-js"
