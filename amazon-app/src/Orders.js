@@ -24,11 +24,17 @@ function Orders() {
         )
             
         )
+            }else {
+                setOrders([])
             }
-    }, [])
+    }, [user])
     return (
         <div className="orders">
             <h1>Your orders</h1>
+
+            <div className='orders__container'>
+              <Order order={orders} /> 
+            </div>
             
         </div>
     )
