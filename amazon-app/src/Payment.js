@@ -50,7 +50,7 @@ function Payment() {
             }
         }).then(({ paymentIntent }) => {
             // paymentIntent = payment confirmation
-            console.log('👱', paymentIntent)
+            // console.log('👱', paymentIntent)
             db
               .collection('users')
               .doc(user?.uid)
