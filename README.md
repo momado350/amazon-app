@@ -1,5 +1,5 @@
 # amazon-app
-This project was bootstrapped with [Create React App] deployed on firebase at: (https://challenge-a915b.web.app).
+
 I am just putting my react skills into test, besides trying Firebase as I am coming from AWS background.
 
 ## Available Scripts
